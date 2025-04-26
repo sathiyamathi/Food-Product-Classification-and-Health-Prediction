@@ -51,3 +51,8 @@ Precision
 Recall
 
 F1 Score
+
+![3](https://github.com/user-attachments/assets/3caee18e-fcf6-4ddb-bc4d-dcbfb339f635)
+![4](https://github.com/user-attachments/assets/d8fbe3f0-de13-4cdd-b0b8-6e91eff66521)
+
+
