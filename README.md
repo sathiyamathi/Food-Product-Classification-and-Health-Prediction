@@ -43,6 +43,8 @@ Pandas, NumPy
 Matplotlib, Seaborn
 
 
+# Evaluation Metrics
+Accuracy
 
 Precision
 
