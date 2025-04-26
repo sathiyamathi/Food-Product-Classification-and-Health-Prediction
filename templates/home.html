@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Smart Food Advisor</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+       
+        <!-- Template Stylesheet -->
+        <link href="../static/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="{{url_for('home')}}" class="navbar-brand">Food <span>Nutrition</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{{url_for('index')}}" class="nav-item nav-link active">Home</a>
+                        
+                        <a href="#" class="nav-item nav-link" > Welcome ! </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Food Nutrients</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Label Detection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+
+        <!-- Booking Start -->
+        <div class="booking">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="booking-content">
+                            <div class="section-header">
+                               
+                                <h2> Food Nutrients</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="booking-form">
+                            {% if message %}
+                            <p style="color: white;">{{ message }}</p>
+                        {% endif %}
+                            <form id="contact-form" action="/detect" method="POST" enctype="multipart/form-data">
+                                <div class="control-group">
+                                    <label for="protein">Protein (g):</label>
+                                    <input type="number" name="protein" class="form-control" id="protein" step="0.1" required>
+                                </div>
+                                
+                                <div class="control-group">
+                                    <label for="carbs">Carbs (g):</label>
+                                    <input type="number" name="carbs" class="form-control" id="carbs" step="0.1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="fat">Fat (g):</label>
+                                    <input type="number" name="fat" class="form-control" id="fat" step="0.1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="fiber">Fiber (g):</label>
+                                    <input type="number" name="fiber" class="form-control" id="fiber" step="0.1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="sugar">Sugar (g):</label>
+                                    <input type="number" name="sugar" class="form-control" id="sugar" step="0.1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="calories">Calories:</label>
+                                    <input type="number" name="calories" class="form-control" id="calories" step="1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="calcium">Calcium (mg):</label>
+                                    <input type="number" name="calcium" class="form-control" id="calcium" step="0.1" required>
+                                </div>
+                            
+                                <div class="control-group">
+                                    <label for="sodium">Sodium (mg):</label>
+                                    <input type="number" name="sodium" class="form-control" id="sodium" step="0.1" required>
+                                </div>
+                              
+                                <div class="control-group">
+                                    <div class="input-group">
+                                        <input type="file" name="photo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  
+                                             <div class="input-group-append">
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                    
+                          
+                              
+                                <div>
+                                    <button class="btn custom-btn" type="submit">Analyse</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+        
+    
+
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/lib/easing/easing.min.js"></script>
+        <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="../static/js/main.js"></script>
+    </body>
+</html>
